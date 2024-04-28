@@ -63,21 +63,7 @@ class SignIn : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success
                     Toast.makeText(this, "Sign in successful", Toast.LENGTH_SHORT).show()
-                    // You can navigate to another activity or perform other actions here
-                    val firestore = FirebaseFirestore.getInstance()
-                    val currentUser = auth.currentUser
-                    val userRef = firestore.collection("users").document(currentUser?.uid ?: "")
-                    val userLocation = hashMapOf(
-                        "latitude" to 33.23163260,
-                        "longitude" to -8.50071160
-                    )
-                    userRef.set(userLocation, SetOptions.merge())
-                        .addOnSuccessListener {
-                            Log.d(TAG, "Location updated successfully")
-                        }
-                        .addOnFailureListener { e ->
-                            Log.w(TAG, "Error updating location", e)
-                        }
+
 
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()

@@ -4,11 +4,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import com.example.myquiizapp.databinding.ActivityMainBinding
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.storage.storage
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -31,6 +34,10 @@ class MainActivity : AppCompatActivity() {
         binding.btnLogout.setOnClickListener{
             FirebaseAuth.getInstance().signOut()
             finishAffinity()
+        }
+        binding.btnCamera.setOnClickListener {
+            val intent = Intent(this, ActivityCamera::class.java)
+            startActivity(intent)
         }
 
  }

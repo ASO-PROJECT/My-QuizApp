@@ -6,10 +6,32 @@
         android:orientation="vertical"
         android:padding="16dp"
         android:layout_height="match_parent">
+    <LinearLayout
+            android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+    <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:id="@+id/btnLogout"/>
+
+    <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Go Maps"
+            android:id="@+id/btnMaps"/>
+    <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Go Camera"
+            android:id="@+id/btnCamera"/>
+    </LinearLayout>
+
     <ImageView
             android:layout_width="match_parent"
             android:layout_height="160dp"
-            android:src="@drawable/main_image" />
+            android:src="@drawable/main_image"
+             />
 
     <LinearLayout
             android:layout_width="match_parent"
@@ -51,14 +73,8 @@
             android:layout_marginStart="4dp"
             android:textSize="20sp"
             android:textStyle="bold"/>
-    <Button android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Go Maps"
-            android:id="@+id/btnMaps"/>
-    <Button android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Logout"
-            android:id="@+id/btnLogout"/>
+
+
 
     <RelativeLayout
             android:layout_width="match_parent"
